@@ -14,7 +14,7 @@ namespace ReadBooks
         public bool SaveBook()
         {
             // save to some db
-            Crashes.GenerateTestCrash();
+            AppCenterHelper.TrackEvent("book_saved");
             return true;
         }
     }
