@@ -14,8 +14,15 @@ namespace ReadBooks
 
         async void LoginButton_Clicked(object sender, System.EventArgs e)
         {
-            throw new Exception("There was an error logging you in");
-            await Navigation.PopModalAsync(true);
+            try
+            {
+                throw new Exception("There was an error logging you in");
+                await Navigation.PopModalAsync(true);
+            }
+            catch(Exception ex)
+            {
+                AppCenterHelper.TrackError(ex);
+            }
         }
     }
 }
