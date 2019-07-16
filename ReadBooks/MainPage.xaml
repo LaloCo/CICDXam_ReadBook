@@ -5,8 +5,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              mc:Ignorable="d" 
              x:Class="ReadBooks.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"
+                     Clicked="AddNewBook_Clicked"/>
+    </ContentPage.ToolbarItems>
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Button Text="Login"
+                Clicked="LoginButton_Clicked"/>
     </StackLayout>
 </ContentPage>
