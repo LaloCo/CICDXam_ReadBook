@@ -16,7 +16,13 @@ namespace ReadBooks
         {
             try
             {
-                AppCenterHelper.TrackEvent("logged_in");
+                //TODO: adding login
+                Dictionary<string, string> keyValuePairs = new Dictionary<string, string>
+                {
+                    { "user", "eduardo@lpa.com" },
+                    { "network", "WiFi" }
+                };
+                AppCenterHelper.TrackEvent("logged_in", keyValuePairs);
                 await Navigation.PopModalAsync(true);
             }
             catch(Exception ex)

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.AppCenter.Crashes;
 
 namespace ReadBooks
@@ -14,8 +15,18 @@ namespace ReadBooks
         public bool SaveBook()
         {
             // save to some db
-            AppCenterHelper.TrackEvent("book_saved");
+            Dictionary<string, string> keyValuePairs = new Dictionary<string, string>
+            {
+                { "book_info", ToString() },
+                { "network", "Cellular" }
+            };
+            AppCenterHelper.TrackEvent("book_saved", keyValuePairs);
             return true;
+        }
+
+        public override string ToString()
+        {
+            return $"{Name} - {Author}";
         }
     }
 }
