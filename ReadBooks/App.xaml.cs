@@ -26,7 +26,7 @@ namespace ReadBooks
             bool didAppCrash = await Crashes.HasCrashedInLastSessionAsync();
             if(didAppCrash)
             {
-                await MainPage.DisplayAlert("I'm sorry", "It appears we had some issue there, sorry about that.", "Don't worry");
+                await MainPage.DisplayAlert("Oops, sorry", "It appears we had some issue there, sorry about that.", "Don't worry");
             }
         }
 
