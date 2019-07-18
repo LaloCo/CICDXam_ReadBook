@@ -3,4 +3,4 @@ Read Book app for the CI/CD Xamarin course
 
 |Android|iOS|
 |---|---|
-|[![Build status](https://build.appcenter.ms/v0.1/apps/081755e8-b755-463d-bd59-751d8e543f54/branches/dev/badge)](https://appcenter.ms)|[![Build status](https://build.appcenter.ms/v0.1/apps/5c733e87-370c-49d9-b9ee-0412ee284ed8/branches/dev/badge)](https://appcenter.ms)|
+|[![Build status](https://build.appcenter.ms/v0.1/apps/af132984-b0f6-490c-b3d2-47fc268655ec/branches/master/badge)](https://appcenter.ms)|[![Build status](https://build.appcenter.ms/v0.1/apps/24fdd54b-cb66-4542-8e53-7503727a4431/branches/master/badge)](https://appcenter.ms)|
