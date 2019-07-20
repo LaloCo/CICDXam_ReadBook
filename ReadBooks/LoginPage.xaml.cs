@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using Microsoft.AppCenter.Crashes;
 using Xamarin.Forms;
 
 namespace ReadBooks
