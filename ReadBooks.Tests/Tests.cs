@@ -28,7 +28,7 @@ namespace ReadBooks.Tests
         [Test]
         public void AppLaunches()
         {
-            app.Screenshot("First screen.");
+            app.Repl();
         }
     }
 }
