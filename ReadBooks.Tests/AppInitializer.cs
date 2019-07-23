@@ -27,9 +27,9 @@ namespace ReadBooks.Tests
                     .Android
                     // TODO: Update this path to point to your Android app and uncomment the
                     // code if the app is not included in the solution.
-                    //.ApkFile ("../../../ReadBooks.Android/bin/Debug/com.lalorosas.readbooks-Signed.apk")
-                    .InstalledApp("com.lalorosas.readbooks")
-                    //.PreferIdeSettings()
+                    .ApkFile ("../../../ReadBooks.Android/bin/Debug/com.lalorosas.readbooks-Signed.apk")
+                    //.InstalledApp("com.lalorosas.readbooks")
+                    .PreferIdeSettings()
                     .StartApp();
             }
 
@@ -37,7 +37,7 @@ namespace ReadBooks.Tests
                 .iOS
                 // TODO: Update this path to point to your iOS app and uncomment the
                 // code if the app is not included in the solution.
-                .AppBundle ("/Users/eduardorosas/Projects/ReadBooks/ReadBooks.iOS/bin/iPhoneSimulator/Debug/ReadBooks.iOS.app")
+                .AppBundle ("../../../ReadBooks.iOS/bin/iPhoneSimulator/Debug/ReadBooks.iOS.app")
                 .DeviceIdentifier("D6B5F3F0-ED71-470F-837D-0C49672EB489")
                 .StartApp();
         }
