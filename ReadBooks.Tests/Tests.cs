@@ -31,6 +31,9 @@ namespace ReadBooks.Tests
             app.Tap(c => c.Text("Login"));
             // app.Repl();
 
+            app.WaitForElement(c => c.Marked("LoginPageLoginButton"),
+                "Did not see the login button",
+                new TimeSpan(0, 0, 2));
             var result = app.Query(c => c.Marked("LoginPageLoginButton"));
             Assert.IsTrue(result.Any(), "Navigation to Login Page didn't happen");
         }
