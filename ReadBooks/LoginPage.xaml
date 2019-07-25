@@ -5,6 +5,7 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center">
             <Button Text="Login"
+                    AutomationId="LoginPageLoginButton"
                     BackgroundColor="Teal"
                     TextColor="White"
                     Clicked="LoginButton_Clicked"/>
