@@ -26,16 +26,16 @@ namespace ReadBooks.Tests
         }
 
         [Test]
-        public void AppNavigatesToLogin()
+        public void AppNavigatesToNewBook()
         {
-            app.Tap(c => c.Text("Login"));
+            app.Tap(c => c.Text("Add"));
             // app.Repl();
 
-            app.WaitForElement(c => c.Marked("LoginPageLoginButton"),
-                "Did not see the login button",
+            app.WaitForElement(c => c.Marked("SaveButton"),
+                "Did not see the save button",
                 new TimeSpan(0, 0, 2));
-            var result = app.Query(c => c.Marked("LoginPageLoginButton"));
-            Assert.IsTrue(result.Any(), "Navigation to Login Page didn't happen");
+            var result = app.Query(c => c.Marked("SaveButton"));
+            Assert.IsTrue(result.Any(), "Navigation to New Book Page didn't happen");
         }
     }
 }

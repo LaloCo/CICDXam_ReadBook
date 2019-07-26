@@ -4,8 +4,19 @@
              x:Class="ReadBooks.NewBookPage">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Save"
+                     AutomationId="SaveButton"
                      Clicked="SaveButton_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
+        <StackLayout Margin="16,16,16,0">
+            <Entry Placeholder="Book name"
+                   x:Name="bookNameEntry"/>
+            <Entry Placeholder="Author name"
+                   x:Name="bookAuthorEntry"/>
+            <Label Text="Finished reading:"
+                   FontSize="12"
+                   TextColor="#88000000"/>
+            <DatePicker x:Name="finishDatePicker"/>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

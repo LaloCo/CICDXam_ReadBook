@@ -9,9 +9,15 @@
         <ToolbarItem Text="Add"
                      Clicked="AddNewBook_Clicked"/>
     </ContentPage.ToolbarItems>
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Button Text="Login"
-                Clicked="LoginButton_Clicked"/>
-    </StackLayout>
+    <ContentPage.Content>
+        <ListView x:Name="booksListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}"
+                              Detail="{Binding FinishedDate, StringFormat='Finished date: {0:MMMM dd, yyyy}'}"
+                              DetailColor="{OnPlatform iOS=#048BA8}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
 </ContentPage>
