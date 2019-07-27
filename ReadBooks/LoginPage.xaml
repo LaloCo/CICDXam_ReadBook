@@ -3,7 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="ReadBooks.LoginPage">
     <ContentPage.Content>
-        <Button Text="Login"
-                Clicked="LoginButton_Clicked"/>
+        <StackLayout VerticalOptions="Center">
+            <Button Text="Login"
+                    AutomationId="LoginPageLoginButton"
+                    BackgroundColor="Teal"
+                    TextColor="White"
+                    Clicked="LoginButton_Clicked"/>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

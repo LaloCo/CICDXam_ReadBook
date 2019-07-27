@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 using Foundation;
@@ -22,8 +23,17 @@ namespace ReadBooks.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            #if ENABLE_TEST_CLOUD
+            Xamarin.Calabash.Start();
+            #endif
+
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+
+            string fileName = "bd_contactos.sqlite";
+            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "..", "Library");
+            string fullPath = Path.Combine(folderPath, fileName);
+
+            LoadApplication(new App(fullPath));
 
             return base.FinishedLaunching(app, options);
         }

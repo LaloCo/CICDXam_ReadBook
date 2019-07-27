@@ -18,16 +18,18 @@ namespace ReadBooks
             InitializeComponent();
         }
 
-        async void LoginButton_Clicked(object sender, System.EventArgs e)
-        {
-            AppCenterHelper.TrackEvent("login_intent");
-            await Navigation.PushModalAsync(new LoginPage());
-        }
-
         async void AddNewBook_Clicked(object sender, System.EventArgs e)
         {
             AppCenterHelper.TrackEvent("add_book_intent");
             await Navigation.PushAsync(new NewBookPage());
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            var books = Book.ReadBooks();
+            booksListView.ItemsSource = books;
         }
     }
 }
