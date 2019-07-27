@@ -10,18 +10,27 @@ namespace ReadBooks
         public NewBookPage()
         {
             InitializeComponent();
+
+            finishDatePicker.MaximumDate = DateTime.Now;
         }
 
         void SaveButton_Clicked(object sender, System.EventArgs e)
         {
             Book book = new Book
             {
-                Author = "",
-                ISBN = "",
-                Name = "",
-                Publisher = ""
+                Author = bookAuthorEntry.Text,
+                Name = bookNameEntry.Text,
+                FinishedDate = finishDatePicker.Date
             };
-            book.SaveBook();
+            bool result = book.SaveBook();
+            if(result)
+            {
+                Navigation.PopAsync();
+            }
+            else
+            {
+                DisplayAlert("Error", "We had problems saving this book, please try again", "Ok");
+            }
         }
     }
 }
