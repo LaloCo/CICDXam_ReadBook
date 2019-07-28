@@ -31,7 +31,7 @@ namespace ReadBooks
         {
             // Handle when your app starts
             AppCenter.Start("ios=ea6fc345-1671-4945-9fbe-7cc344cda0d8;" +
-                            "android=ea623267-b35a-495a-9cf7-c5775ff56f78",
+                            "android=acf3b1a2-5afc-472a-8e13-ee2ea4519bd0",
                             typeof(Analytics), typeof(Crashes));
 
             bool didAppCrash = await Crashes.HasCrashedInLastSessionAsync();

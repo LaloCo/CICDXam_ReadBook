@@ -11,9 +11,9 @@
         <StackLayout Margin="16,16,16,0">
             <Entry Placeholder="Book name"
                    x:Name="bookNameEntry"/>
-            <Entry Placeholder="Author name"
+            <Entry Placeholder="Book author name"
                    x:Name="bookAuthorEntry"/>
-            <Label Text="Finished reading:"
+            <Label Text="Finished reading on:"
                    FontSize="12"
                    TextColor="#88000000"/>
             <DatePicker x:Name="finishDatePicker"/>
