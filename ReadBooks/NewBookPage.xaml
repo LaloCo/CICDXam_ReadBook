@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="ReadBooks.NewBookPage">
+             x:Class="ReadBooks.NewBookPage"
+             BackgroundColor="{DynamicResource BackgroundColor}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Save"
                      AutomationId="SaveButton"
@@ -15,7 +16,7 @@
                    x:Name="bookAuthorEntry"/>
             <Label Text="Finished reading on:"
                    FontSize="12"
-                   TextColor="#88000000"/>
+                   TextColor="{DynamicResource TextSecondaryColor}"/>
             <DatePicker x:Name="finishDatePicker"/>
         </StackLayout>
     </ContentPage.Content>
