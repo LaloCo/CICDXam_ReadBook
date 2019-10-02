@@ -4,18 +4,21 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design" 
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              mc:Ignorable="d" 
-             x:Class="ReadBooks.MainPage">
+             x:Class="ReadBooks.MainPage"
+             BackgroundColor="{DynamicResource BackgroundColor}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add"
                      Clicked="AddNewBook_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <ListView x:Name="booksListView">
+        <ListView x:Name="booksListView"
+                  BackgroundColor="Transparent">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Name}"
-                              Detail="{Binding FinishedDate, StringFormat='Finished date: {0:MMMM dd, yyyy}'}"
-                              DetailColor="{OnPlatform iOS=#048BA8}"/>
+                              TextColor="{DynamicResource TextMainColor}"
+                              Detail="{Binding FinishedDate, StringFormat='Finished on {0:MMMM dd, yyyy}'}"
+                              DetailColor="{DynamicResource TextAccentColor}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

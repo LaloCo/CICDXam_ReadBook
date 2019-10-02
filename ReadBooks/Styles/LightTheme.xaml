@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ReadBooks.Styles.LightTheme">
+
+    <Color x:Key="BackgroundColor">#FFFFFFF</Color>
+    <Color x:Key="TextMainColor">#000000</Color>
+    <Color x:Key="TextSecondaryColor">#88000000</Color>
+    <Color x:Key="TextAccentColor">#BC85FC</Color>
+
+</ResourceDictionary>
