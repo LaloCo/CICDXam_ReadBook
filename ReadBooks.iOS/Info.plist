@@ -23,7 +23,7 @@
 	<key>MinimumOSVersion</key>
 	<string>8.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>ReadBooks</string>
+	<string>Read Books</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.lalorosas.ReadBooks</string>
 	<key>CFBundleVersion</key>
