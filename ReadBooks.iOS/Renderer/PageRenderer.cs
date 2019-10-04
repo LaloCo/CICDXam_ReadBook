@@ -32,9 +32,12 @@ namespace ReadBooks.iOS.Renderer
         {
             base.TraitCollectionDidChange(previousTraitCollection);
 
-            if(TraitCollection.UserInterfaceStyle != previousTraitCollection.UserInterfaceStyle)
+            if (previousTraitCollection != null)
             {
-                SetAppTheme();
+                if (TraitCollection.UserInterfaceStyle != previousTraitCollection.UserInterfaceStyle)
+                {
+                    SetAppTheme();
+                }
             }
         }
 
