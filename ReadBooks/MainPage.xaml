@@ -12,7 +12,7 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ListView x:Name="booksListView"
-                  BackgroundColor="Transparent">
+                  BackgroundColor="Transparent" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Name}"

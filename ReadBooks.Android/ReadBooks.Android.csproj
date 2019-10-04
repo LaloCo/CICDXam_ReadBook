@@ -72,6 +72,9 @@
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.6.292</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Data">
+      <Version>2.1.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
