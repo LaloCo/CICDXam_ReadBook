@@ -14,7 +14,7 @@ namespace ReadBooks
             finishDatePicker.MaximumDate = DateTime.Now;
         }
 
-        void SaveButton_Clicked(object sender, System.EventArgs e)
+        async void SaveButton_Clicked(object sender, System.EventArgs e)
         {
             Book book = new Book
             {
@@ -22,7 +22,8 @@ namespace ReadBooks
                 Name = bookNameEntry.Text,
                 FinishedDate = finishDatePicker.Date
             };
-            bool result = book.SaveBook();
+
+            bool result = await book.SaveBook();
             if(result)
             {
                 Navigation.PopAsync();

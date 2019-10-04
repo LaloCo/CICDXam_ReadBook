@@ -24,11 +24,11 @@ namespace ReadBooks
             await Navigation.PushAsync(new NewBookPage());
         }
 
-        protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
 
-            var books = Book.ReadBooks();
+            var books = await Book.ReadBooks();
             booksListView.ItemsSource = books;
         }
     }

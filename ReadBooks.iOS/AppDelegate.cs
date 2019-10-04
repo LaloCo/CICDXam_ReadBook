@@ -27,6 +27,7 @@ namespace ReadBooks.iOS
             Xamarin.Calabash.Start();
             #endif
 
+            Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
             global::Xamarin.Forms.Forms.Init();
 
             string fileName = "bd_contactos.sqlite";
