@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AppCenter.Crashes;
+using Microsoft.WindowsAzure.MobileServices;
 using SQLite;
 
 namespace ReadBooks
@@ -14,7 +16,9 @@ namespace ReadBooks
         public string ISBN { get; set; }
         public DateTime FinishedDate { get; set; }
 
-        public bool SaveBook()
+        public static MobileServiceClient client = new MobileServiceClient("https://readbooks7.azurewebsites.net");
+
+        public async Task<bool> SaveBook()
         {
             // save to some db
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabasePath))
@@ -31,15 +35,33 @@ namespace ReadBooks
 
                 return rowsInserted > 0;
             }
+
+
+            //try
+            //{
+            //    await client.GetTable<Book>().InsertAsync(this);
+            //    return true;
+            //}
+            //catch(MobileServiceInvalidOperationException msioe)
+            //{
+            //    var response = await msioe.Response.Content.ReadAsStringAsync();
+            //    return false;
+            //}
+            //catch (Exception ex)
+            //{
+            //    return false;
+            //}
         }
 
-        public static List<Book> ReadBooks()
+        public static async Task<List<Book>> ReadBooks()
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabasePath))
             {
                 conn.CreateTable<Book>();
                 return conn.Table<Book>().OrderByDescending(b => b.FinishedDate).ToList();
             }
+
+            //return await client.GetTable<Book>().ToListAsync();
         }
 
         public override string ToString()
